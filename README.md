@@ -19,12 +19,12 @@ sudo apt upgrate
 sudo apt install wget
 ```
 
-**Command download the full node software:**
+**Command to download the full node software:**
 
 ```
 wget https://github.com/spectre-project/rusty-spectre/releases/download/v0.3.16/rusty-spectre-v0.3.16-linux-gnu-aarch64.zip
 ```
-Always check the Spectre Network GitHub for the latest version
+Always check the Spectre Network GitHub for the latest version.
 
 **Command to unzip:**
 
@@ -32,7 +32,7 @@ Always check the Spectre Network GitHub for the latest version
 unzip NAMEOFTHEFILEYOUWANTTOUNZIP
 ```
 
-**Command to run the node:**
+**Command to start the node:**
 
 ```
 ./spectred --utxoindex --rpclisten=0.0.0.0:18110
@@ -44,24 +44,21 @@ Be sure you are in the bin directory.
 ```
 wget https://github.com/spectre-project/spectre-stratum-bridge/releases/download/v0.3.17/spr_bridge-v0.3.17-linux-aarch64.zip
 ```
-Always check the Spectre Network GitHub for the latest version
+Always check the Spectre Network GitHub for the latest version.
 
-**Command to download the TNN Miner file from GitLab:**
-
-```
-wget https://gitlab.com/Tritonn204/tnn-miner/-/releases/0.4.3-r2/downloads/Tnn-miner-arm64-0.4.3-r2.tar.gz
-```
-Always check the gitlab if there are newer versions.
-
-**Command to extract a tar.gz file:**
+**Command to edit the config file:**
 
 ```
-tar -xvzf FILENAME.tar.gz
+nano config.yaml
 ```
-Command from the video:
+Be sure you are in the bin directory of the downloaded and extracted Stratum Bridge files. Change localhost behind spectred_address on 0.0.0.0
+
+**Command to start the Spectre Stratum Bridge :**
+
 ```
-tar -xvzf Tnn-miner-arm64-0.4.3-r2.tar.gz
+./spr_bridge
 ```
+
 **Commands to install screen and start a screen session:**
 
 ```
@@ -75,6 +72,6 @@ Type ctrl-a and d to detach from a screen session and use the command screen-r t
 **Command to start the miner:**
 
 ```
-./tnn-miner-cpu --daemon-address spr.tw-pool.com --port 14001 --wallet WALLETADDRESS.WORKERNAME --threads 8
+./tnn-miner-cpu --daemon-address IPADDRESSOFYOURNODE --port 5555 --wallet WALLETADDRESS.WORKERNAME --threads 8
 ```
 Use 8 threads for the Orange Pi 5 and 4 threads for the Raspberry Pi 5
