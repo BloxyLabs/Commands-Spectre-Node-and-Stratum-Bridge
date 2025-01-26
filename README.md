@@ -10,7 +10,8 @@ If you had fun with the projects, please consider giving us a Super Thanks on Yo
 **Command to upgrade the OS:**
 
 ```
-sudo apt upgrate
+sudo apt update
+sudo apt upgrade
 ```
 
 **Command to install wget if it is not installed on your OS:**
